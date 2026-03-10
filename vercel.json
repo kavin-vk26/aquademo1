@@ -8,6 +8,10 @@
     {
       "src": "web-app/public/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "requirements.txt",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -23,5 +27,8 @@
       "src": "/(.*)",
       "dest": "web-app/public/home.html"
     }
-  ]
+  ],
+  "env": {
+    "PYTHONPATH": "."
+  }
 }
